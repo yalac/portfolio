@@ -1,0 +1,18 @@
+# Fichiers système Windows
+Thumbs.db
+ehthumbs.db
+[Dd]esktop.ini
+$RECYCLE.BIN/
+
+# Configuration locale de Zed
+.zed/
+
+# Fichiers temporaires et journaux
+*.tmp
+*.bak
+*.log
+*~
+
+# Fichiers locaux contenant éventuellement des secrets
+.env
+.env.*
