@@ -5,6 +5,7 @@ body {
     margin: 0;
 }
 
+
 /*========================*/
 /* Style du header */
 /*========================*/
@@ -79,4 +80,101 @@ header nav ul {
     border: 1px solid lightskyblue;
     color: white;
     cursor: pointer;
+}
+
+/*========================*/
+/* Style section home */
+/*========================*/
+.home {
+    padding: 20px 50px;
+    border-bottom: 0.5px solid lightblue;
+}
+
+/* la description dans le home */
+.home-description {
+    color: lightskyblue;
+    margin-bottom: -1rem;
+}
+
+/* le titre du home */
+.home-title {
+    font-size: 3em;
+    font-weight: 800;
+}
+
+.left-and-right {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* partie gauche avec les textes */
+.home-text-left {
+    color: lightslategray;
+    max-width: 70%;
+}
+
+.home-text-left h1 {
+    color: white;
+}
+
+/* partie droite avec les nombres */
+.home-text-right {
+    color: lightslategray;
+}
+
+.important-number {
+    font-size: 32px;
+    color: white;
+}
+
+/* voir les projet depuis home */
+.home-see-project {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
+}
+
+.see-project-text {
+    color: lightslategray;
+}
+
+.see-project-button {
+    color: #0d1216;
+    background-color: lightskyblue;
+    border: 2px solid lightslategray;
+    border-radius: 15px;
+    height: 3rem;
+    width: 10rem;
+}
+
+.see-project-button:hover {
+    transform: translateY(-2px);
+    cursor: pointer;
+}
+
+/*========================*/
+/* Style section projet */
+/*========================*/
+.projects {
+    padding: 20px 50px;
+    border-bottom: 0.5px solid lightblue;
+}
+
+/*========================*/
+/* Style section a propos */
+/*========================*/
+.about {
+    padding: 20px 50px;
+    border-bottom: 0.5px solid lightblue;
+}
+
+/*========================*/
+/* Style section contact */
+/*========================*/
+.contact {
+    padding: 20px 50px;
+    border-bottom: 0.5px solid lightblue;
 }

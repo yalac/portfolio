@@ -11,64 +11,97 @@
     <body>
         <!--Header-->
         <header class="site-header">
-                    <a class="header-left" href="#home"
-                        ><img
-                            src="assets/img/portrait.png"
-                            alt="Image de profil"
-                            width="48"
-                            height="48"
-                        />
-                        <span>LACAILLE Yanis</span></a
-                    >
+            <a class="header-left" href="#home"
+                ><img
+                    src="assets/img/portrait.png"
+                    alt="Image de profil"
+                    width="48"
+                    height="48"
+                />
+                <span>LACAILLE Yanis</span></a
+            >
 
-                    <!--Navigation-->
-                    <div class="header-right">
-                        <nav class="nav-header">
-                            <ul>
-                                <li><a href="#home" aria-current="page">Accueil</a></li>
-                                <li><a href="#projects">Projets</a></li>
-                                <li><a href="#about">À propos</a></li>
-                                <li><a href="#contact">Contact</a></li>
-                            </ul>
-                        </nav>
+            <!--Navigation-->
+            <div class="header-right">
+                <nav class="nav-header">
+                    <ul>
+                        <li><a href="#home" aria-current="page">Accueil</a></li>
+                        <li><a href="#projects">Projets</a></li>
+                        <li><a href="#about">À propos</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </nav>
 
-                        <!--bouton thème claire sombre-->
-                        <div class="theme-mode">
-                            <button id="theme-mode-button" type="button">Clair</button>
-                        </div>
-                    </div>
-                </header>
+                <!--bouton thème claire sombre-->
+                <div class="theme-mode">
+                    <button id="theme-mode-button" type="button">Clair</button>
+                </div>
+            </div>
+        </header>
+        <div class="border-line"></div>
 
         <!--Corp principal qui aura mes 4 parties-->
-        <main>
+        <main class="container">
             <!--Section accueil (présentation)-->
-            <section id="home">
-                <p>En recherche d'alternance 2027-2028</p>
-                <h1>
-                    Yanis - recherche d'alternance en développement web ou jeux
-                </h1>
-
-                <!--petit résumé-->
-                <p>
-                    J'ai réalisé un Bac générale au Lycée Galilée, puis obtenu
-                    mon BTS SIO option SLAM au Campus de la Châtaigneraie à
-                    Mesnil-Esnard, et enfin je suis actuellement en train de
-                    faire un DEC au Canada à la pocatière
+            <section id="home" class="home">
+                <p class="home-description">
+                    Statut - Recherche d'alternance 2027-2028
                 </p>
-                <p>Technologie que je connais : HTML, CSS, JS, Unity, C#</p>
+                <div class="left-and-right">
+                    <div class="home-text-left">
+                        <h1 class="home-title">
+                            Yanis - recherche d'alternance en développement web
+                            ou jeux
+                        </h1>
 
-                <!--quelque chiffre-->
-                <p>1 : Nombre de projets en ligne</p>
-                <p>15 : Nombre de technologie que je connais</p>
-                <p>1 : Nombre d'alternance recherché</p>
+                        <!--petit résumé-->
+
+                        <p class="home-resume">
+                            J'ai réalisé un Bac générale au Lycée Galilée, puis
+                            obtenu mon BTS SIO option SLAM au Campus de la
+                            Châtaigneraie à Mesnil-Esnard, et enfin je suis
+                            actuellement en train de faire un DEC au Canada à la
+                            pocatière
+                        </p>
+                        <p class="home-techno">
+                            Technologie que je connais : HTML, CSS, JS, Unity,
+                            C#
+                        </p>
+                    </div>
+
+                    <!--quelque chiffre-->
+                    <div class="home-numbers home-text-right">
+                        <p class="home-number1">
+                            <strong class="important-number">1</strong
+                            ><br />Nombre de projets en ligne
+                        </p>
+                        <p class="home-number2">
+                            <strong class="important-number">3</strong
+                            ><br />Nombre de technologie que je connais
+                        </p>
+                        <p class="home-number3">
+                            <strong class="important-number">1</strong
+                            ><br />Nombre d'alternance recherché
+                        </p>
+                    </div>
+                </div>
 
                 <!--inciter a aller voir les projets-->
-                <p>J'ai réaliser tous ces projet à la main</p>
-                <button type="button">Aller voir les projets</button>
+                <div class="home-see-project">
+                    <span class="see-project-text"
+                        >J'ai réaliser tous ces projet à la main</span
+                    >
+                    <a href="#projects"
+                        ><button class="see-project-button" type="button">
+                            Voir les projets
+                        </button></a
+                    >
+                </div>
             </section>
+            <div class="border-line"></div>
 
             <!--Section projets (liste de mes projets réalisés)-->
-            <section id="projects">
+            <section id="projects" class="projects">
                 <h2>Mes X projets</h2>
                 <p>
                     Voici la liste de mes projets que j'ai réalisé pendant mon
@@ -87,7 +120,7 @@
 
                 <!--les cartes de tous les projets-->
                 <!--projet 1-->
-                <div id="cards">
+                <div class="cards">
                     <article id="card-project1">
                         <img src="" alt="Image du projet 1" />
                         <p>Numéro du projet</p>
@@ -133,9 +166,10 @@
                     </article>
                 </div>
             </section>
+            <div class="border-line"></div>
 
             <!--Section a propos (mes informations)-->
-            <section id="about">
+            <section id="about" class="about">
                 <h2>Qui je suis ?</h2>
 
                 <!--description-->
@@ -204,9 +238,10 @@
                     >Voir mon CV (PDF)</a
                 >
             </section>
+            <div class="border-line"></div>
 
             <!--Section contact (formulaire pour me contacter)-->
-            <section id="contact">
+            <section id="contact" class="contact">
                 <h2>Me contacter</h2>
                 <p>
                     Vous pouvez me contacter pour toutes questions ou en
@@ -283,13 +318,14 @@
                     positif ou négatif
                 </p>
             </section>
+            <div class="border-line"></div>
         </main>
 
         <!--Footer-->
         <footer>
             <p>LACAILLE Yanis, 2026, portfolio personnel</p>
 
-            <nav id="nav-footer">
+            <nav class="nav-footer">
                 <ul>
                     <li><a href="#home">Accueil</a></li>
                     <li><a href="#projects">Projets</a></li>
