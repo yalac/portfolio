@@ -10,27 +10,34 @@
     <!--Corps principal-->
     <body>
         <!--Header-->
-        <header>
-            <img
-                src="assets/img/portrait.png"
-                alt="Image de profil"
-                width="64"
-                height="64"
-            />
-            <p>LACAILLE Yanis</p>
+        <header class="site-header">
+                    <a class="header-left" href="#home"
+                        ><img
+                            src="assets/img/portrait.png"
+                            alt="Image de profil"
+                            width="48"
+                            height="48"
+                        />
+                        <span>LACAILLE Yanis</span></a
+                    >
 
-            <!--Navigation-->
-            <nav id="nav-header">
-                <ul>
-                    <li><a href="#home">Accueil</a></li>
-                    <li><a href="#projects">Projets</a></li>
-                    <li><a href="#about">À propos</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
+                    <!--Navigation-->
+                    <div class="header-right">
+                        <nav class="nav-header">
+                            <ul>
+                                <li><a href="#home" aria-current="page">Accueil</a></li>
+                                <li><a href="#projects">Projets</a></li>
+                                <li><a href="#about">À propos</a></li>
+                                <li><a href="#contact">Contact</a></li>
+                            </ul>
+                        </nav>
 
-            <button id="theme-mode-button" type="button">Clair</button>
-        </header>
+                        <!--bouton thème claire sombre-->
+                        <div class="theme-mode">
+                            <button id="theme-mode-button" type="button">Clair</button>
+                        </div>
+                    </div>
+                </header>
 
         <!--Corp principal qui aura mes 4 parties-->
         <main>

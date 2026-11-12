@@ -1,0 +1,82 @@
+body {
+    background-color: #0d1216;
+    color: white;
+    padding: 0;
+    margin: 0;
+}
+
+/*========================*/
+/* Style du header */
+/*========================*/
+.site-header {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 0.5px solid lightblue;
+    position: sticky;
+    top: 0;
+    margin: 0;
+    padding: 10px 50px;
+    background-color: #0d1216;
+}
+
+/* partie gauche du header */
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.header-left img {
+    border-radius: 100%;
+    border: 0.5px solid lightslategray;
+}
+
+/* partie droite du header */
+.header-right {
+    display: flex;
+    align-items: center;
+}
+
+.header-right a:hover {
+    color: white;
+}
+
+/* page active */
+.header-right a[aria-current="page"] {
+    text-decoration: underline;
+    text-underline-offset: 5px;
+    text-decoration-color: lightskyblue;
+    color: white;
+}
+
+/* navigation du header et lien*/
+header a {
+    text-decoration: none;
+    color: lightslategray;
+}
+
+header nav ul {
+    display: flex;
+    list-style: none;
+    gap: 15px;
+}
+
+/* bouton mode de couleur */
+.theme-mode {
+    padding-left: 15px;
+}
+
+#theme-mode-button {
+    height: 1.5rem;
+    width: 4rem;
+    border: 1px solid lightslategray;
+    border-radius: 5px;
+    color: lightslategray;
+    background-color: transparent;
+}
+
+#theme-mode-button:hover {
+    border: 1px solid lightskyblue;
+    color: white;
+    cursor: pointer;
+}
