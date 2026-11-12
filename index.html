@@ -128,6 +128,8 @@
             <!--Section a propos (mes informations)-->
             <section id="about">
                 <h2>Qui je suis ?</h2>
+
+                <!--description-->
                 <p>
                     Je suis une personne autonome, organisé et travailleuse.
                     J'ai réalisé ce site qui montre mes compétences et pour
@@ -137,12 +139,16 @@
                     suis a la recherche d'une alternance en développement web
                     pour 2027
                 </p>
+
+                <!--parcours-->
                 <p>
                     J'ai commencé par un bac général, suivi d'un bts sio ou j'ai
                     continué de voir a quelle point j'était passioné. J'ai
                     continué en allant au Canada pour un DEC et maintenant a la
                     recherche d'une alternance pour une probable année au CESI
                 </p>
+
+                <!--formations-->
                 <ul>
                     <li>
                         2021-2024 Bac général, Lycée Galilée, Franqueville
@@ -157,31 +163,118 @@
                         Pocatière, La Pocatière (Québéc)
                     </li>
                 </ul>
+
+                <!--loisirs-->
                 <p>
                     J'adord également le sport, j'ai fait depuis tous petit.
                     J'ai commencé par le football, suivi par du basketball et
                     enfin du badminton. Je joue aussi au jeux-vidéo, je lit des
                     novel et webtoon, et je regarde des animés
                 </p>
+
+                <!--photo profil-->
                 <img
                     src="assets/img/portrait.png"
                     alt="photo de profil"
                     width="128"
                     height="128"
                 />
+
+                <!--ce que j'apprend-->
                 <p>J'apprend en ce moment les technologies suivantes</p>
                 <ul>
                     <li>Flutter</li>
                     <li>JavaScript</li>
                     <li>Unity 3D</li>
                 </ul>
+
+                <!--accéder à mon cv en pdf-->
                 <a href="assets/docs/Yanis_CV.pdf" target="_blank"
                     >Télécharger mon CV (PDF)</a
                 >
             </section>
 
             <!--Section contact (formulaire pour me contacter)-->
-            <section id="contact"></section>
+            <section id="contact">
+                <h2>Me contacter</h2>
+                <p>
+                    Vous pouvez me contacter pour toutes questions ou en
+                    particulier pour une alternance
+                </p>
+                <form>
+                    <!--formulaire du nom-->
+                    <div>
+                        <label for="nom">Nom et prénom:</label>
+                        <input
+                            type="text"
+                            id="nom"
+                            name="nom"
+                            placeholder="Mettre votre nom et prénom"
+                            required
+                        />
+                    </div>
+
+                    <!--formulaire du courriel-->
+                    <div>
+                        <label for="email">Courriel:</label>
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            placeholder="Mettre votre courriel"
+                            required
+                        />
+                    </div>
+
+                    <!--formulaire du message-->
+                    <div>
+                        <label for="message">Message:</label>
+                        <textarea
+                            id="message"
+                            name="message"
+                            rows="5"
+                            placeholder="Laissez ici votre message..."
+                            required
+                        >
+                        </textarea>
+                    </div>
+
+                    <!--bouton d'envoie du mail-->
+                    <div>
+                        <button type="submit">Envoyer</button>
+                    </div>
+                </form>
+
+                <!--autre réseaux-->
+                <ul>
+                    <li>
+                        <a href="https://github.com/yalac" target="_blank"
+                            >Github</a
+                        >
+                    </li>
+                    <li>
+                        <a
+                            href="https://www.linkedin.com/in/yanis-la"
+                            target="_blank"
+                            >Linkedin</a
+                        >
+                    </li>
+                    <li>
+                        <a href="mailto:lacailleyanis@gmail.com" target="_blank"
+                            >Courriel</a
+                        >
+                    </li>
+                </ul>
+
+                <!--délai de réponse-->
+                <p>Délai maximum de réponse est de 3 jours</p>
+
+                <!--courriel reçu-->
+                <p>
+                    Une fois le courriel reçu je répond toujours que ce soit
+                    positif ou négatif
+                </p>
+            </section>
         </main>
 
         <!--Footer-->
