@@ -9,7 +9,7 @@
 
     <!--Corps principal-->
     <body>
-        <!--Header-->
+        <!--HACK: Header-->
         <header class="site-header">
             <a class="header-left" href="#home"
                 ><img
@@ -42,7 +42,7 @@
 
         <!--Corp principal qui aura mes 4 parties-->
         <main class="container">
-            <!--Section accueil (présentation)-->
+            <!--HACK: Section accueil (présentation)-->
             <section id="home" class="home">
                 <p class="home-description">
                     Statut - Recherche d'alternance 2027-2028
@@ -100,7 +100,7 @@
             </section>
             <div class="border-line"></div>
 
-            <!--Section projets (liste de mes projets réalisés)-->
+            <!--HACK: Section projets (liste de mes projets réalisés)-->
             <section id="projects" class="projects">
                 <h2>Mes X projets</h2>
                 <p>
@@ -168,7 +168,7 @@
             </section>
             <div class="border-line"></div>
 
-            <!--Section a propos (mes informations)-->
+            <!--HACK: Section a propos (mes informations)-->
             <section id="about" class="about">
                 <h2>Qui je suis ?</h2>
 
@@ -240,88 +240,102 @@
             </section>
             <div class="border-line"></div>
 
-            <!--Section contact (formulaire pour me contacter)-->
+            <!-- HACK: Section contact (formulaire pour me contacter)-->
             <section id="contact" class="contact">
-                <h2>Me contacter</h2>
-                <p>
+                <h2 class="contact-title">Me contacter</h2>
+                <p class="contact-description">
                     Vous pouvez me contacter pour toutes questions ou en
                     particulier pour une alternance
                 </p>
-                <form>
-                    <!--formulaire du nom-->
-                    <div>
-                        <label for="nom">Nom et prénom:</label>
-                        <input
-                            type="text"
-                            id="nom"
-                            name="nom"
-                            placeholder="Mettre votre nom et prénom"
-                            required
-                        />
+                <div class="left-and-right">
+                    <div class="contact-left">
+                        <form class="contact-form">
+                            <!--formulaire du nom-->
+                            <div class="contact-form-champ">
+                                <label for="nom">Nom et prénom</label>
+                                <input
+                                    type="text"
+                                    id="nom"
+                                    name="nom"
+                                    placeholder="Mettre votre nom et prénom"
+                                    required
+                                />
+                            </div>
+
+                            <!--formulaire du courriel-->
+                            <div class="contact-form-champ">
+                                <label for="email">Courriel</label>
+                                <input
+                                    type="email"
+                                    id="email"
+                                    name="email"
+                                    placeholder="Mettre votre courriel"
+                                    required
+                                />
+                            </div>
+
+                            <!--formulaire du message-->
+                            <div class="contact-form-champ">
+                                <label for="message">Message</label>
+                                <textarea
+                                    id="message"
+                                    name="message"
+                                    rows="5"
+                                    placeholder="Laissez ici votre message..."
+                                    required
+                                ></textarea>
+                            </div>
+
+                            <!--bouton d'envoie du mail-->
+                            <div class="contact-form-champ">
+                                <button type="submit">Envoyer</button>
+                            </div>
+                        </form>
                     </div>
 
-                    <!--formulaire du courriel-->
-                    <div>
-                        <label for="email">Courriel:</label>
-                        <input
-                            type="email"
-                            id="email"
-                            name="email"
-                            placeholder="Mettre votre courriel"
-                            required
-                        />
+                    <div class="contact-right">
+                        <div class="contact-right-text">
+                            <!--délai de réponse-->
+                            <p class="contact-delay">
+                                Délai maximum de réponse est de 3 jours
+                            </p>
+
+                            <!--courriel reçu-->
+                            <p class="contact-email">
+                                Une fois le courriel reçu je répond toujours que
+                                ce soit positif ou négatif
+                            </p>
+                        </div>
+
+                        <!--social media-->
+                        <ul class="contact-social-media">
+                            <li>
+                                <a
+                                    href="https://github.com/yalac"
+                                    target="_blank"
+                                    >Github</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    href="https://www.linkedin.com/in/yanis-la"
+                                    target="_blank"
+                                    >Linkedin</a
+                                >
+                            </li>
+                            <li>
+                                <a href="mailto:lacailleyanis@gmail.com"
+                                    >Courriel</a
+                                >
+                            </li>
+                        </ul>
                     </div>
-
-                    <!--formulaire du message-->
-                    <div>
-                        <label for="message">Message:</label>
-                        <textarea
-                            id="message"
-                            name="message"
-                            rows="5"
-                            placeholder="Laissez ici votre message..."
-                            required
-                        ></textarea>
-                    </div>
-
-                    <!--bouton d'envoie du mail-->
-                    <div>
-                        <button type="submit">Envoyer</button>
-                    </div>
-                </form>
-
-                <!--autre réseaux-->
-                <ul>
-                    <li>
-                        <a href="https://github.com/yalac" target="_blank"
-                            >Github</a
-                        >
-                    </li>
-                    <li>
-                        <a
-                            href="https://www.linkedin.com/in/yanis-la"
-                            target="_blank"
-                            >Linkedin</a
-                        >
-                    </li>
-                    <li>
-                        <a href="mailto:lacailleyanis@gmail.com">Courriel</a>
-                    </li>
-                </ul>
-
-                <!--délai de réponse-->
-                <p>Délai maximum de réponse est de 3 jours</p>
-
-                <!--courriel reçu-->
-                <p>
-                    Une fois le courriel reçu je répond toujours que ce soit
-                    positif ou négatif
-                </p>
+                </div>
             </section>
             <div class="border-line"></div>
         </main>
 
-        <!--Footer-->
+        <!--HACK: Footer-->
         <footer class="site-footer">
             <div class="fotter-left">
                 <p>LACAILLE Yanis, 2026 - Portfolio personnel</p>
