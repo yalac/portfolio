@@ -143,14 +143,14 @@ header nav ul {
 .see-project-button {
     color: #0d1216;
     background-color: lightskyblue;
-    border: 2px solid lightslategray;
+    border: none;
     border-radius: 15px;
     height: 3rem;
     width: 10rem;
 }
 
 .see-project-button:hover {
-    transform: translateY(-2px);
+    transform: translateY(-5px);
     cursor: pointer;
 }
 
@@ -217,18 +217,21 @@ header nav ul {
     margin-bottom: 1rem;
 }
 
+/* partie droite du about */
 .about-right {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
+/* liste des tech que j'apprends */
 .about-learn ul {
     list-style: none;
     text-align: center;
     padding: 0;
 }
 
+/* ma photo du about */
 .about-photo {
     border: 1px solid lightslategray;
     border-radius: 50%;
@@ -325,6 +328,10 @@ header nav ul {
     height: 30px;
     cursor: pointer;
     border: none;
+}
+
+.contact-form button:hover {
+    transform: translateY(-1px);
 }
 
 /* partie droite du contact*/
