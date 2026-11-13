@@ -5,7 +5,6 @@ body {
     margin: 0;
 }
 
-
 /*========================*/
 /* Style du header */
 /*========================*/
@@ -177,4 +176,33 @@ header nav ul {
 .contact {
     padding: 20px 50px;
     border-bottom: 0.5px solid lightblue;
+}
+
+/*========================*/
+/* Style section footer */
+/*========================*/
+.site-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    color: lightslategray;
+}
+
+footer a {
+    text-decoration: none;
+    color: lightslategray;
+}
+
+footer nav ul {
+    display: flex;
+    list-style: none;
+    gap: 15px;
+    text-decoration: underline 0.5px lightslategray;
+    text-underline-offset: 10px;
+}
+
+footer a:hover {
+    color: white;
+    text-decoration: underline 0.5px lightskyblue;
 }
