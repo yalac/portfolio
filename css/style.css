@@ -87,6 +87,7 @@ header nav ul {
 .home {
     padding: 20px 50px;
     border-bottom: 0.5px solid lightblue;
+    scroll-margin-top: 80px;
 }
 
 /* la description dans le home */
@@ -127,7 +128,7 @@ header nav ul {
     color: white;
 }
 
-/* voir les projet depuis home */
+/* voir les project depuis home */
 .home-see-project {
     display: flex;
     gap: 20px;
@@ -155,11 +156,133 @@ header nav ul {
 }
 
 /*========================*/
-/* Style section projet */
+/* Style section project */
 /*========================*/
 .projects {
     padding: 20px 50px;
     border-bottom: 0.5px solid lightblue;
+    color: lightslategray;
+    scroll-margin-top: 30px;
+}
+
+/* titre partie projects*/
+.projects-title {
+    font-size: 3em;
+    font-weight: 800;
+    color: white;
+}
+
+/* boutons pour filtrer les projects */
+.projects-button-filter {
+    display: flex;
+    gap: 1rem;
+}
+
+.projects-button-filter button[aria-current="filter-choice"] {
+    background-color: lightskyblue;
+    color: #0d1216;
+    border: none;
+}
+
+.btn-filter {
+    background-color: #0d1216;
+    border: 0.5px solid lightslategray;
+    border-radius: 30px;
+    color: lightslategray;
+    padding: 7px 25px;
+}
+
+.btn-filter:hover {
+    border: 0.5px solid lightskyblue;
+    color: white;
+    cursor: pointer;
+}
+
+/* le nombre total de projects */
+.projects-total-nb {
+    font-style: italic;
+}
+
+/* carte pour les projects */
+.cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+.card-project {
+    background-color: #0d2327;
+    border: 0.5px solid lightslategray;
+    border-radius: 15px;
+}
+
+.card-project:hover {
+    border: 0.5px solid lightskyblue;
+}
+
+/* image des projects */
+.card-project img {
+    display: block;
+    text-align: center;
+    width: 100%;
+    height: 20rem;
+    background-color: gray;
+    color: white;
+    border-radius: 15px;
+}
+
+/* numéro du project */
+.project-nb {
+    font-style: italic;
+}
+
+.project-nb-cat {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+/* titre du project */
+.project-title {
+    color: white;
+    font-weight: 800;
+    margin-top: 0.75rem;
+    margin-bottom: 0;
+    font-size: 1.5rem;
+}
+
+/* tout le texte des projects */
+.project-text {
+    padding: 1rem;
+}
+
+/* technologie utilisé pour les projects */
+.project-list-tech {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    list-style: none;
+    padding: 0;
+    padding-bottom: 1rem;
+    border-bottom: 0.5px dashed lightslategray;
+}
+
+.project-list-tech li {
+    background-color: #0d1216;
+    border: 0.5px solid lightslategray;
+    border-radius: 10px;
+    padding: 0.25rem 1.5rem;
+}
+
+/* lien pour voir les projects */
+.project-link {
+    text-decoration: none;
+    color: lightskyblue;
+    font-size: 1.2rem;
+}
+
+.project-link:hover {
+    text-decoration: underline;
 }
 
 /*========================*/
@@ -169,6 +292,7 @@ header nav ul {
     padding: 20px 50px;
     border-bottom: 0.5px solid lightblue;
     color: lightslategray;
+    scroll-margin-top: 30px;
 }
 
 /* le titre du a propos */

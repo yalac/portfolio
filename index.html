@@ -86,7 +86,7 @@
                     </div>
                 </div>
 
-                <!--inciter a aller voir les projets-->
+                <!--inciter a aller voir les projects-->
                 <div class="home-see-project">
                     <span class="see-project-text"
                         >J'ai réaliser tous ces projet à la main</span
@@ -100,75 +100,120 @@
             </section>
             <div class="border-line"></div>
 
-            <!--HACK: Section projets (liste de mes projets réalisés)-->
+            <!--HACK: Section projects (liste de mes projects réalisés)-->
             <section id="projects" class="projects">
-                <h2>Mes X projets</h2>
-                <p>
+                <h2 class="projects-title">Mes projets</h2>
+                <p class="projects-description">
                     Voici la liste de mes projets que j'ai réalisé pendant mon
                     temps libres et pour apprendre et prouver mes compétences
                 </p>
 
-                <!--filtre de trier mes projet par catégorie-->
-                <button type="button">Tous</button>
-                <button type="button">Site Web</button>
-                <button type="button">Unity 3D</button>
-                <button type="button">Unity 2D</button>
-                <button type="button">Application mobile</button>
+                <!--filtre de trier mes project par catégorie-->
+                <div class="projects-button-filter">
+                    <button
+                        class="btn-filter"
+                        type="button"
+                        aria-current="filter-choice"
+                    >
+                        Tous
+                    </button>
+                    <button class="btn-filter" type="button">Site Web</button>
+                    <button class="btn-filter" type="button">Unity 3D</button>
+                    <button class="btn-filter" type="button">Unity 2D</button>
+                    <button class="btn-filter" type="button">
+                        Application mobile
+                    </button>
+                </div>
 
-                <!--nombre de projet total-->
-                <p>X projets affichés</p>
+                <!--nombre de project total-->
+                <p class="projects-total-nb">X projets affichés</p>
 
-                <!--les cartes de tous les projets-->
-                <!--projet 1-->
+                <!--les cartes de tous les projects-->
+                <!--project 1-->
                 <div class="cards">
-                    <article id="card-project1">
-                        <img src="" alt="Image du projet 1" />
-                        <p>Numéro du projet</p>
-                        <p>Titre du projet</p>
-                        <p>Site Web</p>
-                        <p>Description du projet</p>
-                        <ul>
-                            <li>zed</li>
-                            <li>html/css</li>
-                            <li>js</li>
-                            <li>github</li>
-                        </ul>
-                        <a href="">Voir le site →</a>
-                    </article>
+                    <div id="card-project1" class="card-project">
+                        <img
+                            src="assets/img/projet1.png"
+                            alt="Image du projet 1"
+                        />
+                        <div class="project-text">
+                            <div class="project-nb-cat">
+                                <p class="project-nb">01</p>
 
-                    <!--projet 2-->
-                    <article id="card-project2">
-                        <img src="" alt="Image du projet 2" />
-                        <p>Numéro du projet</p>
-                        <p>Titre du projet</p>
-                        <p>Unity 2D</p>
-                        <p>Description du projet</p>
-                        <ul>
-                            <li>Unity</li>
-                            <li>C#</li>
-                        </ul>
-                        <a href="">Voir l'application →</a>
-                    </article>
+                                <p class="project-category">
+                                    Application Mobile
+                                </p>
+                            </div>
+                            <p class="project-title">Sandwich Spammer</p>
+                            <p class="project-description">
+                                C'est un projet réalisé pendant mon BTS SIO, il
+                                s'agit du début d'un clicker
+                            </p>
+                            <ul class="project-list-tech">
+                                <li>JetBrains</li>
+                                <li>C#</li>
+                                <li>MAUI</li>
+                                <li>XAML</li>
+                            </ul>
+                            <a
+                                class="project-link"
+                                href="https://github.com/yalac/SandwichSpammer"
+                                target="_blank"
+                                >Voir l'application &rarr;</a
+                            >
+                        </div>
+                    </div>
 
-                    <!--projet 3-->
-                    <article id="card-project3">
-                        <img src="" alt="Image du projet" />
+                    <!--project 2-->
+                    <div id="card-project2" class="card-project">
+                        <img alt="Image du projet 2" />
+                        <div class="project-text">
+                            <div class="project-nb-cat">
+                                <p class="project-nb">02</p>
+                                <p class="project-category">Unity 2D</p>
+                            </div>
+                            <p class="project-title">Titre du projet</p>
 
-                        <p>Numéro du projet</p>
-                        <p>Titre du projet</p>
-                        <p>Unity 3D</p>
-                        <p>Description du projet</p>
-                        <ul>
-                            <li>Unity</li>
-                            <li>C#</li>
-                        </ul>
-                        <a href="">Voir l'application →</a>
-                    </article>
+                            <p class="project-description">
+                                Description du projet
+                            </p>
+                            <ul class="project-list-tech">
+                                <li>Unity</li>
+                                <li>C#</li>
+                            </ul>
+                            <a class="project-link"
+                                >Voir l'application &rarr;</a
+                            >
+                        </div>
+                    </div>
+
+                    <!--project 3-->
+                    <div id="card-project3" class="card-project">
+                        <img alt="Image du projet 3" />
+                        <div class="project-text">
+                            <div class="project-nb-cat">
+                                <p class="project-nb">03</p>
+                                <p class="project-category">Unity 3D</p>
+                            </div>
+                            <p class="project-title">Titre du projet</p>
+
+                            <p class="project-description">
+                                Description du projet
+                            </p>
+                            <ul class="project-list-tech">
+                                <li>Unity</li>
+                                <li>C#</li>
+                            </ul>
+                            <a class="project-link"
+                                >Voir l'application &rarr;</a
+                            >
+                        </div>
+                    </div>
                 </div>
             </section>
             <div class="border-line"></div>
 
-            <!--HACK: Section a propos (mes informations)-->
+            <!--HACK: Section a propos (mes information)-->
             <section id="about" class="about">
                 <h2 class="about-title">À propos de moi</h2>
 
@@ -241,7 +286,7 @@
                             J'adore également le sport, j'ai fait depuis tout
                             petit. J'ai commencé par le football, suivi par du
                             basketball et enfin du badminton. Je joue aussi au
-                            jeux-vidéo, je lits des novel et webtoon, et je
+                            jeux-vidéo, je lis des novel et webtoon, et je
                             regarde des animés
                         </p>
                     </div>
