@@ -38,7 +38,7 @@ navLinks.forEach((link) => {
 // option pour l'observer
 const observerOptions = {
   root: null,
-  rootMargin: "0px -40% 0px -40%",
+  rootMargin: "-50%",
   threshold: 0.0,
 };
 
