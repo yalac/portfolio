@@ -1,8 +1,26 @@
+/* déclaration variables couleurs (dark-mode par défault) */
+:root {
+    --bg-main: #0d1216;
+    --bg-card: #0d2327;
+    --text-title: white;
+    --text-description: lightslategray;
+    --text-second-color: lightskyblue;
+}
+
 body {
-    background-color: #0d1216;
-    color: white;
+    background-color: var(--bg-main);
+    color: var(--text-title);
     padding: 0;
     margin: 0;
+}
+
+/* quand on change en light-mode */
+body.light-mode {
+    --bg-main: #f8fafc;
+    --bg-card: #ffffff;
+    --text-title: #0d1216;
+    --text-description: #475569;
+    --text-second-color: #0284c7;
 }
 
 /*========================*/
@@ -11,12 +29,12 @@ body {
 .site-header {
     display: flex;
     justify-content: space-between;
-    border-bottom: 0.5px solid lightblue;
+    border-bottom: 0.5px solid var(--text-second-color);
     position: sticky;
     top: 0;
     margin: 0;
     padding: 10px 50px;
-    background-color: #0d1216;
+    background-color: var(--bg-main);
 }
 
 /* partie gauche du header */
@@ -28,7 +46,7 @@ body {
 
 .header-left img {
     border-radius: 100%;
-    border: 0.5px solid lightslategray;
+    border: 0.5px solid var(--text-description);
 }
 
 /* partie droite du header */
@@ -38,21 +56,21 @@ body {
 }
 
 .header-right a:hover {
-    color: white;
+    color: var(--text-title);
 }
 
 /* page active */
 .header-right a[aria-current="page"] {
     text-decoration: underline;
     text-underline-offset: 5px;
-    text-decoration-color: lightskyblue;
-    color: white;
+    text-decoration-color: var(--text-second-color);
+    color: var(--text-title);
 }
 
 /* navigation du header et lien*/
 header a {
     text-decoration: none;
-    color: lightslategray;
+    color: var(--text-description);
 }
 
 header nav ul {
@@ -69,15 +87,15 @@ header nav ul {
 #theme-mode-button {
     height: 1.5rem;
     width: 4rem;
-    border: 1px solid lightslategray;
+    border: 1px solid var(--text-description);
     border-radius: 5px;
-    color: lightslategray;
+    color: var(--text-description);
     background-color: transparent;
 }
 
 #theme-mode-button:hover {
-    border: 1px solid lightskyblue;
-    color: white;
+    border: 1px solid var(--text-second-color);
+    color: var(--text-title);
     cursor: pointer;
 }
 
@@ -86,13 +104,13 @@ header nav ul {
 /*========================*/
 .home {
     padding: 20px 50px;
-    border-bottom: 0.5px solid lightblue;
+    border-bottom: 0.5px solid var(--text-second-color);
     scroll-margin-top: 80px;
 }
 
 /* la description dans le home */
 .home-description {
-    color: lightskyblue;
+    color: var(--text-second-color);
     margin-bottom: -1rem;
 }
 
@@ -110,22 +128,22 @@ header nav ul {
 
 /* partie gauche avec les textes */
 .home-text-left {
-    color: lightslategray;
+    color: var(--text-description);
     max-width: 70%;
 }
 
 .home-text-left h1 {
-    color: white;
+    color: var(--text-title);
 }
 
 /* partie droite avec les nombres */
 .home-text-right {
-    color: lightslategray;
+    color: var(--text-description);
 }
 
 .important-number {
     font-size: 32px;
-    color: white;
+    color: var(--text-title);
 }
 
 /* voir les project depuis home */
@@ -138,12 +156,12 @@ header nav ul {
 }
 
 .see-project-text {
-    color: lightslategray;
+    color: var(--text-description);
 }
 
 .see-project-button {
-    color: #0d1216;
-    background-color: lightskyblue;
+    color: var(--bg-main);
+    background-color: var(--text-second-color);
     border: none;
     border-radius: 15px;
     height: 3rem;
@@ -160,8 +178,8 @@ header nav ul {
 /*========================*/
 .projects {
     padding: 20px 50px;
-    border-bottom: 0.5px solid lightblue;
-    color: lightslategray;
+    border-bottom: 0.5px solid var(--text-second-color);
+    color: var(--text-description);
     scroll-margin-top: 30px;
 }
 
@@ -169,7 +187,7 @@ header nav ul {
 .projects-title {
     font-size: 3em;
     font-weight: 800;
-    color: white;
+    color: var(--text-title);
 }
 
 /* boutons pour filtrer les projects */
@@ -179,22 +197,22 @@ header nav ul {
 }
 
 .projects-button-filter button[aria-current="filter-choice"] {
-    background-color: lightskyblue;
-    color: #0d1216;
+    background-color: var(--text-second-color);
+    color: var(--bg-main);
     border: none;
 }
 
 .btn-filter {
-    background-color: #0d1216;
-    border: 0.5px solid lightslategray;
+    background-color: var(--bg-main);
+    border: 0.5px solid var(--text-description);
     border-radius: 30px;
-    color: lightslategray;
+    color: var(--text-description);
     padding: 7px 25px;
 }
 
 .btn-filter:hover {
-    border: 0.5px solid lightskyblue;
-    color: white;
+    border: 0.5px solid var(--text-second-color);
+    color: var(--text-title);
     cursor: pointer;
 }
 
@@ -211,13 +229,13 @@ header nav ul {
 }
 
 .card-project {
-    background-color: #0d2327;
-    border: 0.5px solid lightslategray;
+    background-color: var(--bg-card);
+    border: 0.5px solid var(--text-description);
     border-radius: 15px;
 }
 
 .card-project:hover {
-    border: 0.5px solid lightskyblue;
+    border: 0.5px solid var(--text-second-color);
 }
 
 /* image des projects */
@@ -227,7 +245,7 @@ header nav ul {
     width: 100%;
     height: 20rem;
     background-color: gray;
-    color: white;
+    color: var(--text-title);
     border-radius: 15px;
 }
 
@@ -244,7 +262,7 @@ header nav ul {
 
 /* titre du project */
 .project-title {
-    color: white;
+    color: var(--text-title);
     font-weight: 800;
     margin-top: 0.75rem;
     margin-bottom: 0;
@@ -264,12 +282,12 @@ header nav ul {
     list-style: none;
     padding: 0;
     padding-bottom: 1rem;
-    border-bottom: 0.5px dashed lightslategray;
+    border-bottom: 0.5px dashed var(--text-description);
 }
 
 .project-list-tech li {
-    background-color: #0d1216;
-    border: 0.5px solid lightslategray;
+    background-color: var(--bg-main);
+    border: 0.5px solid var(--text-description);
     border-radius: 10px;
     padding: 0.25rem 1.5rem;
 }
@@ -277,7 +295,7 @@ header nav ul {
 /* lien pour voir les projects */
 .project-link {
     text-decoration: none;
-    color: lightskyblue;
+    color: var(--text-second-color);
     font-size: 1.2rem;
 }
 
@@ -290,8 +308,8 @@ header nav ul {
 /*========================*/
 .about {
     padding: 20px 50px;
-    border-bottom: 0.5px solid lightblue;
-    color: lightslategray;
+    border-bottom: 0.5px solid var(--text-second-color);
+    color: var(--text-description);
     scroll-margin-top: 30px;
 }
 
@@ -299,7 +317,7 @@ header nav ul {
 .about-title {
     font-size: 3em;
     font-weight: 800;
-    color: white;
+    color: var(--text-title);
 }
 
 /* description du a propos */
@@ -322,11 +340,11 @@ header nav ul {
 
 .formation-year {
     font-size: 1.2rem;
-    color: lightskyblue;
+    color: var(--text-second-color);
 }
 
 .formation-graduate {
-    color: white;
+    color: var(--text-title);
 }
 
 .formation-school,
@@ -357,23 +375,23 @@ header nav ul {
 
 /* ma photo du about */
 .about-photo {
-    border: 1px solid lightslategray;
+    border: 1px solid var(--text-description);
     border-radius: 50%;
 }
 
 /* le bouton pour ouvrir le cv */
 .about-cv {
     text-decoration: none;
-    background-color: #0d1216;
-    color: white;
+    background-color: var(--bg-main);
+    color: var(--text-title);
     font-weight: 800;
     padding: 10px 20px;
-    border: 0.5px solid lightslategray;
+    border: 0.5px solid var(--text-description);
     border-radius: 10px;
 }
 
 .about-cv:hover {
-    border: 0.5px solid lightskyblue;
+    border: 0.5px solid var(--text-second-color);
     transform: translateY(-5px);
     cursor: pointer;
 }
@@ -383,7 +401,7 @@ header nav ul {
 /*========================*/
 .contact {
     padding: 20px 50px;
-    border-bottom: 0.5px solid lightblue;
+    border-bottom: 0.5px solid var(--text-second-color);
 }
 
 /* titre du contact*/
@@ -395,15 +413,16 @@ header nav ul {
 
 /* description du contact */
 .contact-description {
-    color: lightslategray;
+    color: var(--text-description);
 }
 
 /* partie gauche du contact */
 .contact-left {
-    background-color: #0d2327;
+    background-color: var(--bg-card);
     padding: 15px;
     border-radius: 15px;
     width: 55%;
+    border: 0.5px solid var(--text-description);
 }
 
 /* formulaire du contact */
@@ -419,35 +438,35 @@ header nav ul {
 }
 
 .contact-form label {
-    color: lightslategray;
+    color: var(--text-description);
     margin-bottom: 5px;
 }
 
 .contact-form input,
 .contact-form textarea {
-    color: lightslategray;
-    background-color: #0d1216;
+    color: var(--text-description);
+    background-color: var(--bg-main);
     border-radius: 10px;
-    border: 0.5px solid lightslategray;
+    border: 0.5px solid var(--text-description);
     padding: 0.5rem;
     margin-bottom: 15px;
 }
 
 .contact-form input:hover,
 .contact-form textarea:hover {
-    border: 0.5px solid lightskyblue;
+    border: 0.5px solid var(--text-second-color);
 }
 
 .contact-form input:focus,
 .contact-form textarea:focus {
-    color: white;
-    border: 2px solid lightskyblue;
+    color: var(--text-title);
+    border: 2px solid var(--text-second-color);
     outline: none;
 }
 
 .contact-form button {
-    color: #0d1216;
-    background-color: lightskyblue;
+    color: var(--bg-main);
+    background-color: var(--text-second-color);
     border-radius: 15px;
     height: 30px;
     cursor: pointer;
@@ -460,7 +479,7 @@ header nav ul {
 
 /* partie droite du contact*/
 .contact-right {
-    color: lightslategray;
+    color: var(--text-description);
     width: 35%;
 }
 
@@ -471,7 +490,7 @@ header nav ul {
 
 .contact-delay {
     padding-bottom: 15px;
-    border-bottom: 0.5px dashed lightslategray;
+    border-bottom: 0.5px dashed var(--text-description);
 }
 
 /* les liens de mes réseaux sociaux */
@@ -484,16 +503,16 @@ header nav ul {
 
 .contact-social-media a {
     text-decoration: none;
-    background-color: #0d2327;
-    color: lightslategray;
-    border: 0.5px solid lightslategray;
+    background-color: var(--bg-card);
+    color: var(--text-description);
+    border: 0.5px solid var(--text-description);
     border-radius: 10px;
     padding: 0.5rem 1rem;
 }
 
 .contact-social-media a:hover {
-    color: white;
-    border: 0.5px solid lightskyblue;
+    color: var(--text-title);
+    border: 0.5px solid var(--text-second-color);
 }
 
 /*========================*/
@@ -504,18 +523,18 @@ header nav ul {
     justify-content: space-between;
     align-items: center;
     padding: 20px 50px;
-    color: lightslategray;
+    color: var(--text-description);
 }
 
 /* lien du footer */
 footer a {
     text-decoration: none;
-    color: lightslategray;
+    color: var(--text-description);
 }
 
 footer a:hover {
-    color: white;
-    text-decoration: underline 0.5px lightskyblue;
+    color: var(--text-title);
+    text-decoration: underline 0.5px var(--text-second-color);
 }
 
 /* navigation du footer */
@@ -523,6 +542,6 @@ footer nav ul {
     display: flex;
     list-style: none;
     gap: 15px;
-    text-decoration: underline 0.5px lightslategray;
+    text-decoration: underline 0.5px var(--text-description);
     text-underline-offset: 10px;
 }
