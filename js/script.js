@@ -74,3 +74,58 @@ sections.forEach((section) => {
 /* ========================================================= */
 /* Function pour le formulaire */
 /* ========================================================= */
+// récupére le message de réponse et le formulaire
+const form = document.getElementById("contact-form");
+const formMessage = document.getElementById("form-message");
+
+form.addEventListener("submit", async (error) => {
+  // Permet de rester sur la page lors de l'envoie du formulaire et de ne pas être redirigé
+  error.preventDefault();
+
+  // récupére les donné de nom, email, et contact-message
+  const name = document.getElementById("nom").value.trim();
+  const email = document.getElementById("email").value.trim();
+  const message = document.getElementById("contact-message").value.trim();
+
+  // si nom vide alors erreur
+  if (name === "") {
+    formMessage.style.color = "red";
+    formMessage.textContent = "Erreur : entrez un nom";
+    return;
+  }
+
+  // si email vide ou pas @ ou pas de . alors erreur
+  if (email === "" || !email.includes("@") || !email.includes(".")) {
+    formMessage.style.color = "red";
+    formMessage.textContent = "Erreur : entrez un courriel valide";
+    return;
+  }
+
+  // si message vide alors erreur
+  if (message === "") {
+    formMessage.style.color = "red";
+    formMessage.textContent = "Erreur : entrez un message";
+    return;
+  }
+
+  // Envoie le formulaire à web3Forms et attend sa réponse
+  const answer = await fetch("https://api.web3forms.com/submit", {
+    method: "POST",
+    body: new FormData(form),
+  });
+
+  // si la réponse est bonne alors affiche envoyé, reset le form puis disparait apres 5s
+  // sinon affiche echec
+  if (answer.ok) {
+    formMessage.style.color = "green";
+    formMessage.textContent = "Mail envoyé avec succès !";
+    form.reset();
+
+    setTimeout(() => {
+      formMessage.textContent = "";
+    }, 5000);
+  } else {
+    formMessage.style.color = "red";
+    formMessage.textContent = "Échec de l'envoie du mail";
+  }
+});

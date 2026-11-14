@@ -132,10 +132,7 @@
                 <!--project 1-->
                 <div class="cards">
                     <div id="card-project1" class="card-project">
-                        <img
-                            src="assets/img/projet1.png"
-                            alt="Image du projet 1"
-                        />
+                        <img alt="Image du projet 1" />
                         <div class="project-text">
                             <div class="project-nb-cat">
                                 <p class="project-nb">01</p>
@@ -336,10 +333,23 @@
                 </p>
                 <div class="left-and-right">
                     <div class="contact-left">
-                        <form class="contact-form">
+                        <form
+                            id="contact-form"
+                            class="contact-form"
+                            action="https://api.web3forms.com/submit"
+                            method="POST"
+                            novalidate
+                        >
+                            <!-- gére l'envoie avec web3forms et ma clé -->
+                            <input
+                                type="hidden"
+                                name="access_key"
+                                value="369a281a-ea59-45b2-ad6a-bda0a0d9c820"
+                            />
+
                             <!--formulaire du nom-->
                             <div class="contact-form-champ">
-                                <label for="nom">Nom et prénom</label>
+                                <label for="nom">Nom et prénom*</label>
                                 <input
                                     type="text"
                                     id="nom"
@@ -351,7 +361,7 @@
 
                             <!--formulaire du courriel-->
                             <div class="contact-form-champ">
-                                <label for="email">Courriel</label>
+                                <label for="email">Courriel*</label>
                                 <input
                                     type="email"
                                     id="email"
@@ -363,9 +373,9 @@
 
                             <!--formulaire du message-->
                             <div class="contact-form-champ">
-                                <label for="message">Message</label>
+                                <label for="message">Message*</label>
                                 <textarea
-                                    id="message"
+                                    id="contact-message"
                                     name="message"
                                     rows="5"
                                     placeholder="Laissez ici votre message..."
@@ -375,7 +385,15 @@
 
                             <!--bouton d'envoie du mail-->
                             <div class="contact-form-champ">
-                                <button type="submit">Envoyer</button>
+                                <button id="validate-form-button" type="submit">
+                                    Envoyer
+                                </button>
+                                <div class="text-submit">
+                                    <p id="form-message"></p>
+                                    <p class="validate-information">
+                                        * Champs obligatoires
+                                    </p>
+                                </div>
                             </div>
                         </form>
                     </div>
