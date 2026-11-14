@@ -68,6 +68,15 @@ sections.forEach((section) => {
 });
 
 /* ========================================================= */
+/* Compte le nombre de projects */
+/* ========================================================= */
+// récupére tous les projets (récupérable par la classe card-project)
+const projectList = document.querySelectorAll(".card-project");
+
+// modifie le text de l'id project-counter pour mettre la longeur de projectList
+document.getElementById("project-counter").textContent = projectList.length;
+
+/* ========================================================= */
 /* Function pour les filtres */
 /* ========================================================= */
 
