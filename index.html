@@ -111,16 +111,39 @@
                 <!--filtre de trier mes project par catégorie-->
                 <div class="projects-button-filter">
                     <button
-                        class="btn-filter"
+                        class="button-filter"
                         type="button"
                         aria-current="filter-choice"
+                        data-filter="all"
                     >
                         Tous
                     </button>
-                    <button class="btn-filter" type="button">Site Web</button>
-                    <button class="btn-filter" type="button">Unity 3D</button>
-                    <button class="btn-filter" type="button">Unity 2D</button>
-                    <button class="btn-filter" type="button">
+                    <button
+                        class="button-filter"
+                        type="button"
+                        data-filter="web"
+                    >
+                        Site Web
+                    </button>
+                    <button
+                        class="button-filter"
+                        type="button"
+                        data-filter="unity-3d"
+                    >
+                        Unity 3D
+                    </button>
+                    <button
+                        class="button-filter"
+                        type="button"
+                        data-filter="unity-2d"
+                    >
+                        Unity 2D
+                    </button>
+                    <button
+                        class="button-filter"
+                        type="button"
+                        data-filter="app-mobile"
+                    >
                         Application mobile
                     </button>
                 </div>
@@ -133,7 +156,7 @@
                 <!--les cartes de tous les projects-->
                 <!--project 1-->
                 <div class="cards">
-                    <div id="card-project1" class="card-project">
+                    <div id="card-project1" class="card-project app-mobile">
                         <img alt="Image du projet 1" />
                         <div class="project-text">
                             <div class="project-nb-cat">
@@ -164,7 +187,7 @@
                     </div>
 
                     <!--project 2-->
-                    <div id="card-project2" class="card-project">
+                    <div id="card-project2" class="card-project unity-2d">
                         <img alt="Image du projet 2" />
                         <div class="project-text">
                             <div class="project-nb-cat">
@@ -187,7 +210,7 @@
                     </div>
 
                     <!--project 3-->
-                    <div id="card-project3" class="card-project">
+                    <div id="card-project3" class="card-project unity-3d">
                         <img alt="Image du projet 3" />
                         <div class="project-text">
                             <div class="project-nb-cat">
@@ -314,13 +337,13 @@
                         </div>
 
                         <!--accéder à mon cv en pdf-->
-                        <button
+                        <a
                             class="about-cv"
                             href="assets/docs/Yanis_CV.pdf"
                             target="_blank"
                         >
                             Voir mon CV (PDF)
-                        </button>
+                        </a>
                     </div>
                 </div>
             </section>

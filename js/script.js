@@ -79,6 +79,38 @@ document.getElementById("project-counter").textContent = projectList.length;
 /* ========================================================= */
 /* Function pour les filtres */
 /* ========================================================= */
+const filterButtons = document.querySelectorAll(".button-filter");
+const projects = document.querySelectorAll(".card-project");
+
+//  si on click sur un bouton de filtre alors enlève le aria-current puis le met sur le bon
+filterButtons.forEach((button) => {
+  button.addEventListener("click", function () {
+    filterButtons.forEach((item) => {
+      item.removeAttribute("aria-current");
+    });
+
+    this.setAttribute("aria-current", "filter-choice");
+  });
+});
+
+// function pour filtrer les projects en function de leur filtre (class)
+function filterProject(filter) {
+  projects.forEach((card) => {
+    if ((filter === "all") | card.classList.contains(filter)) {
+      card.classList.remove("hidden");
+    } else {
+      card.classList.add("hidden");
+    }
+  });
+}
+
+// pour chaque bouton, j'appelle la function et récupère data-filter pour comparer
+filterButtons.forEach((button) => {
+  button.addEventListener("click", (event) => {
+    const filter = event.currentTarget.getAttribute("data-filter");
+    filterProject(filter);
+  });
+});
 
 /* ========================================================= */
 /* Function pour le formulaire */

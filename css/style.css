@@ -202,7 +202,7 @@ header nav ul {
     border: none;
 }
 
-.btn-filter {
+.button-filter {
     background-color: var(--bg-main);
     border: 0.5px solid var(--text-description);
     border-radius: 30px;
@@ -210,10 +210,14 @@ header nav ul {
     padding: 7px 25px;
 }
 
-.btn-filter:hover {
+.button-filter:hover {
     border: 0.5px solid var(--text-second-color);
     color: var(--text-title);
     cursor: pointer;
+}
+
+.hidden {
+    display: none;
 }
 
 /* le nombre total de projects */
