@@ -282,6 +282,7 @@ header nav ul {
 .project-list-tech {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     gap: 1rem;
     list-style: none;
     padding: 0;
