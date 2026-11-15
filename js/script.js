@@ -68,19 +68,11 @@ sections.forEach((section) => {
 });
 
 /* ========================================================= */
-/* Compte le nombre de projects */
-/* ========================================================= */
-// récupére tous les projets (récupérable par la classe card-project)
-const projectList = document.querySelectorAll(".card-project");
-
-// modifie le text de l'id project-counter pour mettre la longeur de projectList
-document.getElementById("project-counter").textContent = projectList.length;
-
-/* ========================================================= */
 /* Function pour les filtres */
 /* ========================================================= */
 const filterButtons = document.querySelectorAll(".button-filter");
 const projects = document.querySelectorAll(".card-project");
+const counter = document.getElementById("project-counter");
 
 //  si on click sur un bouton de filtre alors enlève le aria-current puis le met sur le bon
 filterButtons.forEach((button) => {
@@ -95,12 +87,16 @@ filterButtons.forEach((button) => {
 
 // function pour filtrer les projects en function de leur filtre (class)
 function filterProject(filter) {
+  let projectCount = 0;
+
   projects.forEach((card) => {
     if ((filter === "all") | card.classList.contains(filter)) {
       card.classList.remove("hidden");
+      projectCount++;
     } else {
       card.classList.add("hidden");
     }
+    counter.textContent = projectCount;
   });
 }
 
@@ -111,6 +107,9 @@ filterButtons.forEach((button) => {
     filterProject(filter);
   });
 });
+
+// initialiser a all pour par défaut (permet aussi d'avoir le bon nombre de project)
+filterProject("all");
 
 /* ========================================================= */
 /* Function pour le formulaire */
