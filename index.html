@@ -38,10 +38,9 @@
                 </div>
             </div>
         </header>
-        <div class="border-line"></div>
 
         <!--Corp principal qui aura mes 4 parties-->
-        <main class="container">
+        <main>
             <!--HACK: Section accueil (présentation)-->
             <section id="home" class="home">
                 <p class="home-description">
@@ -64,8 +63,11 @@
                             pocatière
                         </p>
                         <p class="home-techno">
-                            Technologie que je connais : HTML, CSS, JS, Unity,
-                            C#
+                            Technologie que je connais : HTML, CSS, PHP,
+                            JavaScript, Unity 2D et 3D, C#, Python, Astro, Dart,
+                            mySql, SqlServer, Transact-SQL, PHPMyAdmin, Symfony,
+                            Cycle en V, Agilité, Suite Office, Visual Studio,
+                            Visual Studio Code, Rider, Wamp, VirtualBox
                         </p>
                     </div>
 
@@ -91,14 +93,11 @@
                     <span class="see-project-text"
                         >J'ai réaliser tous ces projet à la main</span
                     >
-                    <a href="#projects"
-                        ><button class="see-project-button" type="button">
-                            Voir les projets
-                        </button></a
-                    >
+                    <a href="#projects" class="see-project-link">
+                        Voir les projets
+                    </a>
                 </div>
             </section>
-            <div class="border-line"></div>
 
             <!--HACK: Section projects (liste de mes projects réalisés)-->
             <section id="projects" class="projects">
@@ -157,7 +156,7 @@
 
                 <!--nombre de project total-->
                 <p class="projects-total-nb">
-                    <span id="project-counter">0</span> projets affichés
+                    <span id="project-counter">0</span> projets
                 </p>
 
                 <!--les cartes de tous les projects-->
@@ -356,7 +355,7 @@
 
                     <!--project 7-->
                     <div
-                        id="card-project6"
+                        id="card-project7"
                         class="card-project app-windows more-card-hide"
                     >
                         <img
@@ -392,7 +391,7 @@
 
                     <!--project 8-->
                     <div
-                        id="card-project6"
+                        id="card-project8"
                         class="card-project web more-card-hide"
                     >
                         <img
@@ -420,7 +419,7 @@
                                 <li>Twig</li>
                             </ul>
                             <a
-                                href="https://github.com/yalac/application-erasmus"
+                                href="https://github.com/yalac/site-suivi-de-stage"
                                 target="_blank"
                                 class="project-link"
                                 >Voir le github &rarr;</a
@@ -433,7 +432,6 @@
                     Voir plus
                 </button>
             </section>
-            <div class="border-line"></div>
 
             <!--HACK: Section a propos (mes information)-->
             <section id="about" class="about">
@@ -547,7 +545,6 @@
                     </div>
                 </div>
             </section>
-            <div class="border-line"></div>
 
             <!-- HACK: Section contact (formulaire pour me contacter)-->
             <section id="contact" class="contact">
@@ -563,7 +560,6 @@
                             class="contact-form"
                             action="https://api.web3forms.com/submit"
                             method="POST"
-                            novalidate
                         >
                             <!-- gére l'envoie avec web3forms et ma clé -->
                             <input
@@ -607,6 +603,8 @@
                                     required
                                 ></textarea>
                             </div>
+
+                            <div class="h-captcha" data-captcha="true"></div>
 
                             <!--bouton d'envoie du mail-->
                             <div class="contact-form-champ">
@@ -662,16 +660,15 @@
                     </div>
                 </div>
             </section>
-            <div class="border-line"></div>
         </main>
 
         <!--HACK: Footer-->
         <footer class="site-footer">
-            <div class="fotter-left">
+            <div>
                 <p>LACAILLE Yanis, 2026 - Portfolio personnel</p>
             </div>
 
-            <div class="fotter-right">
+            <div>
                 <nav class="nav-footer">
                     <ul>
                         <li><a href="#home">Accueil</a></li>
@@ -683,5 +680,10 @@
             </div>
         </footer>
         <script src="js/script.js"></script>
+        <script
+            src="https://web3forms.com/client/script.js"
+            async
+            defer
+        ></script>
     </body>
 </html>

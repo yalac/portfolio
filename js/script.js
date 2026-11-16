@@ -129,9 +129,9 @@ filterProject("all");
 const form = document.getElementById("contact-form");
 const formMessage = document.getElementById("form-message");
 
-form.addEventListener("submit", async (error) => {
+form.addEventListener("submit", async (event) => {
   // Permet de rester sur la page lors de l'envoie du formulaire et de ne pas être redirigé
-  error.preventDefault();
+  event.preventDefault();
 
   // récupére les donné de nom, email, et contact-message
   const name = document.getElementById("nom").value.trim();

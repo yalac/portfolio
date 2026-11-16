@@ -155,20 +155,24 @@ header nav ul {
     padding-top: 20px;
 }
 
-.see-project-text {
+.see-project-link {
     color: var(--text-description);
 }
 
-.see-project-button {
+.see-project-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     color: var(--bg-main);
     background-color: var(--text-second-color);
     border: none;
     border-radius: 15px;
     height: 3rem;
     width: 10rem;
+    text-decoration: none;
 }
 
-.see-project-button:hover {
+.see-project-link:hover {
     transform: translateY(-5px);
     cursor: pointer;
 }
@@ -352,6 +356,7 @@ header nav ul {
 /* partie avec mes formations */
 .about-formations {
     list-style: none;
+    padding: 0;
 }
 
 .formation-year {
@@ -443,7 +448,6 @@ header nav ul {
 
 /* formulaire du contact */
 .contact-form {
-    gap: 15px;
     padding: 0 10px;
 }
 
@@ -529,6 +533,7 @@ header nav ul {
 .contact-social-media {
     display: flex;
     gap: 10px;
+    padding: 0;
     justify-content: center;
     list-style: none;
 }
