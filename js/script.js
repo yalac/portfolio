@@ -169,3 +169,21 @@ form.addEventListener("submit", async (error) => {
     formMessage.textContent = "Échec de l'envoie du mail";
   }
 });
+
+/* ========================================================= */
+/* Function pour afficher tous les projects */
+/* ========================================================= */
+const buttonMoreProject = document.getElementById("more-projects-button");
+const listProject = document.querySelector(".cards");
+const projectSection = document.getElementById("projects");
+
+buttonMoreProject.onclick = () => {
+  listProject.classList.toggle("show-all");
+
+  if (listProject.classList.contains("show-all")) {
+    buttonMoreProject.textContent = "Voir moins";
+  } else {
+    buttonMoreProject.textContent = "Voir plus";
+    projectSection.scrollIntoView({ behavior: "smooth" });
+  }
+};

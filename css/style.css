@@ -216,10 +216,6 @@ header nav ul {
     cursor: pointer;
 }
 
-.hidden {
-    display: none;
-}
-
 /* le nombre total de projects */
 .projects-total-nb {
     font-style: italic;
@@ -306,6 +302,21 @@ header nav ul {
 
 .project-link:hover {
     text-decoration: underline;
+}
+
+.more-projects-button {
+    background-color: var(--bg-main);
+    border: 0.5px solid var(--text-description);
+    border-radius: 30px;
+    color: var(--text-description);
+    padding: 7px 25px;
+    margin-top: 1rem;
+}
+
+.more-projects-button:hover {
+    border: 0.5px solid var(--text-second-color);
+    color: var(--text-title);
+    cursor: pointer;
 }
 
 /*========================*/
@@ -565,4 +576,17 @@ footer nav ul {
     gap: 15px;
     text-decoration: underline 0.5px var(--text-description);
     text-underline-offset: 10px;
+}
+
+/* pour cacher des élément */
+.hidden {
+    display: none;
+}
+
+.more-card-hide {
+    display: none;
+}
+
+.show-all .more-card-hide {
+    display: block;
 }
