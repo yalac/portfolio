@@ -73,6 +73,8 @@ sections.forEach((section) => {
 const filterButtons = document.querySelectorAll(".button-filter");
 const projects = document.querySelectorAll(".card-project");
 const counter = document.getElementById("project-counter");
+const buttonMoreProject = document.getElementById("more-projects-button");
+const listProject = document.querySelector(".cards");
 
 //  si on click sur un bouton de filtre alors enlève le aria-current puis le met sur le bon
 filterButtons.forEach((button) => {
@@ -80,8 +82,7 @@ filterButtons.forEach((button) => {
     filterButtons.forEach((item) => {
       item.removeAttribute("aria-current");
     });
-
-    this.setAttribute("aria-current", "filter-choice");
+    button.setAttribute("aria-current", "filter-choice");
   });
 });
 
@@ -90,14 +91,24 @@ function filterProject(filter) {
   let projectCount = 0;
 
   projects.forEach((card) => {
-    if ((filter === "all") | card.classList.contains(filter)) {
+    if (filter === "all" || card.classList.contains(filter)) {
       card.classList.remove("hidden");
       projectCount++;
+      card.classList.toggle("more-card-hide", projectCount > 4);
     } else {
       card.classList.add("hidden");
     }
-    counter.textContent = projectCount;
   });
+
+  counter.textContent = projectCount;
+
+  if (projectCount > 4) {
+    buttonMoreProject.classList.remove("hidden");
+  } else {
+    buttonMoreProject.classList.add("hidden");
+    listProject.classList.remove("show-all");
+    buttonMoreProject.textContent = "Voir plus";
+  }
 }
 
 // pour chaque bouton, j'appelle la function et récupère data-filter pour comparer
@@ -173,8 +184,6 @@ form.addEventListener("submit", async (error) => {
 /* ========================================================= */
 /* Function pour afficher tous les projects */
 /* ========================================================= */
-const buttonMoreProject = document.getElementById("more-projects-button");
-const listProject = document.querySelector(".cards");
 const projectSection = document.getElementById("projects");
 
 buttonMoreProject.onclick = () => {

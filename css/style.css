@@ -590,3 +590,7 @@ footer nav ul {
 .show-all .more-card-hide {
     display: block;
 }
+
+.show-all .more-card-hide.hidden {
+    display: none;
+}
